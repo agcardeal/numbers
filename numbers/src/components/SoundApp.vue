@@ -1,21 +1,22 @@
 <template>
-  <div class="flex justify-center">
-    <button @mouseover="play" @mouseleave="stop" label="Trumpet"> 🎺 </button>
-  </div>
+  <button @click="play">Play a sound</button>
 </template>
 
 <script>
-import { useSound } from 'vue-use-sound'
-import trumpetSfx from '../assets/sounds/optimus.mp3'
+
+import { useSound } from '@vueuse/sound'
+import trumpetSfx from '@/assets/sounds/optimus.mp3'
 
 export default {
   setup() {
-    const { play, stop } = useSound(trumpetSfx)
-
+    const { play, stop, pause } = useSound(trumpetSfx)
     return {
       play,
       stop,
     }
   },
+  mounted () {
+    console.log('trumpetSfx ', trumpetSfx)
+  }
 }
 </script>

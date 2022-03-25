@@ -18,7 +18,8 @@ module.exports = {
         // DirectoryNameWebpackPlugin(true)
       ],
       alias: {
-        '@components': resolve('src/components/')
+        '@components': resolve('src/components/'),
+        '@assets': resolve('src/assets/')
       }
     }
   }
