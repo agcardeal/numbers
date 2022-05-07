@@ -5,18 +5,18 @@
 <script>
 
 import { useSound } from '@vueuse/sound'
-import trumpetSfx from '@/assets/sounds/optimus.mp3'
+import sounds from '@/assets/sounds/sounds'
 
 export default {
   setup() {
-    const { play, stop, pause } = useSound(trumpetSfx)
+    const { play, stop, pause } = useSound(sounds.one)
     return {
       play,
       stop,
     }
   },
   mounted () {
-    console.log('trumpetSfx ', trumpetSfx)
+    console.log('trumpetSfx ', sounds.one)
   }
 }
 </script>
