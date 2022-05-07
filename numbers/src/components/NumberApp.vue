@@ -29,11 +29,13 @@ export default {
       if(number.length == 1) {
         console.log(n);
         console.log('-----');
+        this.$emit('selectedNumber', n)
       } else {
         console.log((n>19) ? number[0] * 10 : number[0]);
         console.log('e');
         console.log(number[1]);
         console.log('-----');
+        this.$emit('selectedNumber', number[1])
       }
     }
   }
